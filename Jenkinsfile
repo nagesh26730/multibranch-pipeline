@@ -6,6 +6,9 @@ agent any
      when{
      branch "develop"
      }
+     steps{
+      sh "mvn clean package"
+     }
     }
      stage("sonar analysis"){
      when{
